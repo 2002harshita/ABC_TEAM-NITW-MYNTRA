@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Upload</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body >
+    <div class="container">
+      <div class="upload-section">
+        <h2>Upload Your Video</h2>
+        <form
+          id="uploadForm"
+          action="/upload"
+          method="post"
+          enctype="multipart/form-data"
+        >
+        <label for="videoFile">Choose a video:</label>
+        <input type="file" id="videoFile" name="video" accept="video/*" required>
+        <button type="submit"><strong>Upload</strong></button>
+        </form>
+      </div>
+      <div class="video-section">
+        <div class="video-controls">
+          <button id="prevButton" class="arrow-button">&#8249;</button>
+          <div class="video-gallery" id="videoGallery"></div>
+          <button id="nextButton" class="arrow-button">&#8250;</button>
+        </div>
+        <div class="video-actions">
+          <button id="likeButton" class="action-button">
+            <i class="fas fa-thumbs-up"></i>
+          </button>
+          <button id="dislikeButton" class="action-button">
+            <i class="fas fa-thumbs-down"></i>
+          </button>
+        </div>
+      </div>
+      <div id="heartOverlay" class="heart-overlay">
+        <i class="fas fa-heart"></i>
+      </div>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

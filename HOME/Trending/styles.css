@@ -1,0 +1,216 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+
+body {
+    margin: 0;
+    background-image: url('https://wallpapercave.com/wp/wp7681118.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html {
+  text-align: center;
+  padding-top: 50px;
+}
+
+blockquote {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  background: #eee;
+  padding: 40px 30px 30px 60px;
+  border-radius: 10px;
+  font-family: 'Bitter', serif;
+  color: #333;
+  text-align: left;
+  
+  box-shadow: 1px 1px 1px #999,
+              2px 2px 1px #999,
+              3px 3px 1px #999;
+  transition-duration: .3s;
+}
+
+blockquote span.author {
+  position: relative;
+  display: block;
+  
+  text-align: right;
+  margin-top: 5px;
+  color: #999;
+  
+  i {
+    position: relative;
+    background: #eee;
+    padding-left: 5px;
+    font-style: italic;
+    z-index: 5;
+  }
+  
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    z-index: 1;
+  }
+}
+
+blockquote:hover {
+  box-shadow: 1px 1px 5px #999,
+              2px 2px 6px #999,
+              3px 3px 7px #999;
+}
+
+blockquote::before {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  content: "\"";
+  font-family: 'Bitter', serif;
+  font-size: 120px;
+  color: #999
+}
+
+.text{
+	margin: 0;
+	position:absolute;
+  right:0;
+  bottom:0;
+  padding-bottom: 15px;
+	font-family: "Henny Penny", cursive;
+	color:#FF1694;
+}
+
+p {
+	margin: auto;
+	letter-spacing: 0.0015em;
+	font-size: 5em;
+	text-shadow: 0 1px #f1a4f4, -1px 0 #f1a4f4, -1px 2px #f1a4f4, -2px 1px #f1a4f4,
+		-2px 3px #f1a4f4, -3px 2px #f1a4f4, -3px 4px #f1a4f4, -4px 3px #f1a4f4,
+		-4px 5px #f1a4f4, -5px 4px #f1a4f4, -5px 6px #f1a4f4, -6px 5px #f1a4f4,
+		-6px 7px #f1a4f4, -7px 6px #f1a4f4, -7px 8px #f1a4f4, -8px 7px #f1a4f4;
+	text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin: 183px auto 3px auto;
+  perspective: 1000px;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: rotate360 60s infinite linear;
+}
+
+.carousel__face {
+  position: absolute;
+  width: 300px;
+  height: 170px;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  background-size: cover;
+  box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.5);
+}
+
+.carousel__face span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel__face button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-family: 'Bitter', serif;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel__face button:hover {
+  background-color: hotpink;
+  color: #fff;
+}
+
+.carousel__face:nth-child(1) {
+  background-image: url("https://img.freepik.com/free-photo/happy-curly-female-blogger-thinks-about-new-content-smiles-pleasantly-writes-down-information-notebook-folds-laundry-uses-smartphone-webcam-isolated-pink_273609-52596.jpg?w=996&t=st=1720991939~exp=1720992539~hmac=efdda8ccaf5efcbf92814a60c83d0b30b8a4edd5b1bf9e4d53c023eeef312e7f");
+  transform: rotateY(0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+  background-image: url("https://img.freepik.com/free-photo/beauty-blogger-present-beauty-cosmetics-sitting-front-camera-recording-video_7861-773.jpg?w=996&t=st=1720992043~exp=1720992643~hmac=28866f0550d3ef070fdf44e4b4801a4ee614f9f08df7707ae4f300db6d434aa5");
+  transform: rotateY(40deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+  background-image: url("https://img.freepik.com/free-photo/asian-young-woman-live-streaming-showing-clothes-front-camera-sale-fashion-clothing_74952-2314.jpg?w=996&t=st=1720992161~exp=1720992761~hmac=f19d226dcce8cf4e43f1cb173de72ed5cb001e051328cd475e56e50131fcb97d");
+  transform: rotateY(80deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+  background-image: url("https://img.freepik.com/free-photo/young-pretty-blogger-holding-shoe-heel-sneakers-thoughtfully-looking-aside-while-recording-new-fashion-video-vlog-camera_574295-5294.jpg?w=996&t=st=1720992211~exp=1720992811~hmac=6d38d1bf016c2722b61c6356a233370aa7f08ff64a1469d6e0d90da3ab6716fb");
+  transform: rotateY(120deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+  background-image: url("https://img.freepik.com/premium-photo/vlogger-recording-with-clothes_23-2148349496.jpg?w=996");
+  transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+  background-image: url("https://img.freepik.com/free-photo/portrait-blogger-brushing-hair-camera_23-2148586369.jpg?w=996&t=st=1720992370~exp=1720992970~hmac=cf3d99ad651ec201f444ebfe44e62b777acc57eb30a2689782b59ee89c14b9bc");
+  transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+  background-image: url("https://img.freepik.com/free-photo/woman-taking-selfie-with-pink-t-shirt_23-2148302771.jpg?w=996&t=st=1720992313~exp=1720992913~hmac=188eb488e56e78fb55fa7c83132ea8400ff82846ea78bb40a28571cea4c2a54c");
+  transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+  background-image: url("https://img.freepik.com/free-photo/beauty-blogger-present-beauty-cosmetics-sitting-front-camera-recording-video_7861-771.jpg?w=996&t=st=1720992290~exp=1720992890~hmac=6fdee3ffacf2ae42d35217f4bb33512b2f5d3a50d879b5f0d5a637ffee02d3a3");
+  transform: rotateY(280deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(9) {
+  background-image: url("https://img.freepik.com/free-photo/designer-creates-clothes-shoots-camera_1157-33801.jpg?w=996&t=st=1720992239~exp=1720992839~hmac=433699bc1599bc7fe5c66fdfd3ba77c9fa8c7b823f278a8facc9e49c393c8747");
+  transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
+}
